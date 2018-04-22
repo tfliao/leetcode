@@ -32,7 +32,7 @@ public:
 				char op = ops[i];
 				state ns = next(s, op);
 				if (ns.first == target) return cs + 1;
-				if (target > 100 && ns.first < 0) continue;
+				if (ns.first < 0) continue;
 				if (cost.count(ns) > 0) continue;
 				if (ns.second > target*3/2) continue;
 //				cout << s.first << ", " << s.second << ": " << cs << " -" << op << "> "  << ns.first << ", " << ns.second<< endl;
